@@ -1,0 +1,50 @@
+{
+  "name": "@magic-modules/git-list",
+  "version": "0.0.1",
+  "homepage": "https://magic-modules.github.io/git-list",
+  "scripts": {
+    "start": "t -p",
+    "format": "f -w --exclude docs",
+    "test": "t --exclude docs example config.js",
+    "build": "NODE_ENV=production magic build",
+    "prod": "NODE_ENV=production magic build serve --watch src",
+    "dev": "magic dev --watch src",
+    "calls": "calls"
+  },
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magic-modules/git-list.git"
+  },
+  "bugs": {
+    "url": "https://github.com/magic-modules/git-list/issues"
+  },
+  "dependencies": {
+    "@magic-modules/git-badges": "github:magic-modules/git-badges"
+  },
+  "devDependencies": {
+    "@magic-modules/pre": "github:magic-modules/pre",
+    "@magic-themes/docs": "github:magic-themes/docs",
+    "@magic/core": "github:magic/core",
+    "@magic/test": "0.0.12"
+  },
+  "author": "Wizards & Witches",
+  "description": "@magic-modules/git-list. shows a list of git repositories belonging to a github/gitlab org.",
+  "keywords": [
+    "magic",
+    "git-list",
+    "github",
+    "gitlab",
+    "badges"
+  ],
+  "license": "AGPL-3.0",
+  "contributors": [
+    {
+      "name": "jascha ehrenreich",
+      "github": "jaeh"
+    }
+  ]
+}

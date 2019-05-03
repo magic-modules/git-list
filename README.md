@@ -1,0 +1,62 @@
+## @magic-modules/git-list
+this is the [@magic-modules](https://github.com/magic-modules/)
+GitList module.
+
+shows a list of git repositories belonging to a github/gitlab org.
+
+[html docs](https://magic-modules.github.io/git-list/)
+
+[![NPM version][npm-image]][npm-url]
+[![Linux Build Status][travis-image]][travis-url]
+[![Windows Build Status][appveyor-image]][appveyor-url]
+[![Coverage Status][coveralls-image]][coveralls-url]
+[![Greenkeeper badge][greenkeeper-image]][greenkeeper-url]
+[![Known Vulnerabilities][snyk-image]][snyk-url]
+
+[npm-image]: https://img.shields.io/npm/v/@magic-modules/git-list.svg
+[npm-url]: https://www.npmjs.com/package/@magic-modules/git-list
+[travis-image]: https://api.travis-ci.org/magic-modules/git-list.svg?branch=master
+[travis-url]: https://travis-ci.org/magic-modules/git-list
+[appveyor-image]: https://img.shields.io/appveyor/ci/jaeh/git-list/master.svg
+[appveyor-url]: https://ci.appveyor.com/project/jaeh/git-list/branch/master
+[coveralls-image]: https://coveralls.io/repos/github/magic-modules/git-list/badge.svg
+[coveralls-url]: https://coveralls.io/github/magic-modules/git-list
+[greenkeeper-image]: https://badges.greenkeeper.io/magic-modules/git-list.svg
+[greenkeeper-url]: https://badges.greenkeeper.io/magic-modules/git-list.svg
+[snyk-image]: https://snyk.io/test/github/magic-modules/git-list/badge.svg
+[snyk-url]: https://snyk.io/test/github/magic-modules/git-list
+
+#### install:
+```bash
+npm install --save-exact @magic-modules/git-list
+```
+
+#### usage:
+
+##### import:
+```javascript
+// assets/index.js:
+
+
+module.exports = {
+  //... other entries
+  GitList = require('@magic-modules/git-list'),
+}
+```
+
+##### use tag
+```javascript
+// in any component view
+module.exports = () =>
+  GitList({
+    header: 'magic',
+    org: 'magic',
+    class: 'custom-class',
+    items: [
+      { name: 'core', description: '@magic/core library. grundstein.' },
+    ],
+  })
+
+```
+
+thats it.
