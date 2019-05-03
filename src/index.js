@@ -1,21 +1,25 @@
 const GitList = ({
-  items,
+  items = [],
   prefix = 'gitlist-item',
   org,
   host = 'github.com',
   header,
   ...props
 }) => {
+  if (!items.length) {
+    return
+  }
+
   if (!props.class) {
     props.class = 'GitList'
   } else if (!props.class.includes('GitList')) {
     props.class = `GitList ${props.class}`
   }
 
-  return [
-    header && h2(header),
-    ul(props, items.map(i => GitList.Item({ org, host, prefix, ...i }))),
-  ]
+  return ul(props, [
+    header && li(h2(header)),
+    items.map(i => GitList.Item({ org, host, prefix, ...i }))
+  ])
 }
 
 GitList.style = {
