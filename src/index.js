@@ -2,11 +2,18 @@ const GitList = ({
   items = [],
   prefix = 'gitlist-item',
   org,
-  host = 'github.com',
+  host = 'github',
   header,
   ...props
 }) => {
   if (!items.length) {
+    // const stack = new Error().stack
+    // console.error(`GitList called without items ${stack}`)
+    return
+  }
+
+  if (!org) {
+    // console.error('GitList called without org')
     return
   }
 
@@ -17,7 +24,7 @@ const GitList = ({
   }
 
   return ul(props, [
-    header && li(h2(header)),
+    header && li([h3(header)]),
     items.map(i => GitList.Item({ org, host, prefix, ...i }))
   ])
 }
@@ -32,13 +39,13 @@ GitList.style = {
 
 GitList.Item = ({ name, description, prefix, org, host }) =>
   li({ id: `${prefix ? `${prefix}-` : ''}${org}-${name}` }, [
-    h3([Link({ to: `https://${host}/${org}/${name}` }, `@${org}/${name}`)]),
+    h3([Link({ to: `https://${host}.com/${org}/${name}` }, `@${org}/${name}`)]),
     p(description),
     GitBadges(`${org}/${name}`),
-    p([Link({ to: `https://${org}.${host}/${name}` }, 'docs / demo')]),
+    p([Link({ to: `https://${org}.${host}.io/${name}` }, 'docs / demo')]),
   ])
 
-GitList.dependencies = {
+GitList.Item.dependencies = {
   GitBadges: require('@magic-modules/git-badges'),
 }
 
