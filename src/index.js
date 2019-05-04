@@ -4,6 +4,7 @@ const GitList = ({
   org,
   host = 'github',
   header,
+  description,
   ...props
 }) => {
   if (!items.length) {
@@ -23,9 +24,12 @@ const GitList = ({
     props.class = `GitList ${props.class}`
   }
 
-  return ul(props, [
-    header && li([h3(header)]),
-    items.map(i => GitList.Item({ org, host, prefix, ...i }))
+  return div(props, [
+    header && h2(header),
+    description && div({ class: 'description' }, description),
+    ul(props, [
+      items.map(i => GitList.Item({ org, host, prefix, ...i }))
+    ]),
   ])
 }
 
