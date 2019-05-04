@@ -37,7 +37,6 @@ npm install --save-exact @magic-modules/git-list
 ```javascript
 // assets/index.js:
 
-
 module.exports = {
   //... other entries
   GitList = require('@magic-modules/git-list'),
@@ -50,7 +49,7 @@ module.exports = {
 module.exports = () =>
   GitList({
     header: 'magic',
-    description: [
+    desc: [ // also accepts longer key: description
       'magic static and serverless webapp generator.',
       'client html/css/js size ~5kb.',
     ],
@@ -58,10 +57,12 @@ module.exports = () =>
     host: 'gitlab', // github is default and can be omitted
     class: 'custom-container-class',
     items: [
-      { name: 'core', description: '@magic/core library. grundstein.' },
+      {
+        name: 'core',
+        desc: '@magic/core library. grundstein.' // also accepts longer key: description
+      },
     ],
   })
-
 ```
 
 thats it.

@@ -30,22 +30,26 @@ GitList: require('@magic-modules/module-list'),
 module.exports = () =>
   GitList({
     header: 'magic',
-    description: [
+    desc: [ // also accepts longer key: description
       'magic static page and serverless webapp generator.',
       'client html/css/js size ~5kb.',
     ],
+    // set id prefix for both list as well as items to allow hash navigation
+    // container id will be set to id,
+    // list item id will be set to \`\${id}-item-\${org}-\${name}\`
+    id: 'magic-list',
     org: 'magic',
-    host: 'github', // github is default, gitlab works too.
+    host: 'github',       // github is default, gitlab works too.
     class: 'custom-class',
     items: [
       { name: 'core', description: '@magic/core library. grundstein.' },
     ],
-  })
-`),
+  })`),
 
   h2({ id: 'demo' }, 'demo'),
   p('this is what it looks like'),
   GitList({
+    id: 'magic-list',
     header: 'magic',
     org: 'magic',
     description: [
