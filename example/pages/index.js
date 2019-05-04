@@ -53,7 +53,8 @@ module.exports = () =>
     header: 'magic',
     org: 'magic',
     description: [
-      'magic static and serverless webapp generator.',
+      Link({ to: 'https://magic.github.io' }, '@magic' ),
+      ' static and serverless webapp generator.',
       ' client html/css/js size ~5kb.',
     ],
     class: 'custom-class',
