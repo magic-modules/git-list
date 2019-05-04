@@ -1,5 +1,5 @@
 const GitList = props => {
-  let { items = [], id = 'gitlist', org, host = 'github', header, desc = props.description } = props
+  let { items = [], org, host = 'github', header, desc = props.description } = props
 
   CHECK_PROPS(props, GitList.props, 'GitList')
 
@@ -28,10 +28,6 @@ GitList.style = {
     li: {
       margin: '0.5em 0 0',
     },
-    a: {
-      display: 'block',
-      lineHeight: 1.8,
-    },
   },
 }
 
@@ -40,7 +36,7 @@ GitList.Item = props => {
   CHECK_PROPS(props, GitList.Item.props, 'GitList.Item')
   const desc = props.desc || props.description
 
-  return li({ id: `${id}-item-${org}-${name}` }, [
+  return li({ id: `${id}-item-${org}-${name}`, class: 'GitListItem' }, [
     h3([Link({ to: `https://${host}.com/${org}/${name}` }, `@${org}/${name}`)]),
     desc && p(desc),
     GitBadges(`${org}/${name}`),
@@ -48,12 +44,21 @@ GitList.Item = props => {
   ])
 }
 
+GitList.Item.style = {
+  '.GitListItem': {
+    a: {
+      display: 'block',
+      lineHeight: 1.8,
+    },
+  },
+}
+
 GitList.Item.dependencies = {
   GitBadges: require('@magic-modules/git-badges'),
 }
 
 GitList.props = [
-  { key: 'id', type: 'string', selector: true, default: 'gitlist' },
+  { key: 'id', type: 'string' },
   { key: 'class', type: 'string', selector: true },
   { key: 'desc', type: ['string', 'array'], alias: 'description' },
   { key: 'items', type: 'array', required: true },
