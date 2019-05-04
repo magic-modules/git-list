@@ -30,6 +30,10 @@ GitList.style = {
       li: {
         padding: '0.2em 0 0',
       },
+
+      a: {
+        display: 'block',
+      },
     },
   },
 }
@@ -53,17 +57,8 @@ GitList.Item = props => {
     h3([Link({ to: `https://${host}.com/${org}/${name}` }, `@${org}/${name}`)]),
     desc && p(desc),
     GitBadges(`${org}/${name}`),
-    p([Link({ to: `https://${org}.${host}.io/${name}` }, 'docs / demo')]),
+    Link({ to: `https://${org}.${host}.io/${name}` }, 'docs / demo'),
   ])
-}
-
-GitList.Item.style = {
-  '.GitListItem': {
-    a: {
-      display: 'block',
-      lineHeight: 1.8,
-    },
-  },
 }
 
 GitList.Item.dependencies = {
