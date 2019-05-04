@@ -1,40 +1,22 @@
-const GitList = ({
-  items = [],
-  id = 'gitlist',
-  org,
-  host = 'github',
-  header,
-  description,
-  desc,
-  ...props
-}) => {
-  if (!items.length) {
-    console.error('GitList called without items')
-    return
-  }
+const GitList = props => {
+  let { items = [], id = 'gitlist', org, host = 'github', header, desc = props.description } = props
 
-  if (!org) {
-    console.error('GitList called without org')
-    return
-  }
+  CHECK_PROPS(props, GitList.props, 'GitList')
 
-  // fallbacks for shorter names
-  if (!desc) {
-    desc = description
-  }
-
+  const p = {}
   if (!props.class) {
-    props.class = 'GitList'
+    p.class = 'GitList'
   } else if (!props.class.includes('GitList')) {
-    props.class = `GitList ${props.class}`
+    p.class = `GitList ${props.class}`
+  }
+  if (props.id) {
+    p.id = props.id
   }
 
-  return div(props, [
+  return div(p, [
     header && h2(header),
     desc && div({ class: 'description' }, desc),
-    ul(props, [
-      items.map(i => GitList.Item({ org, host, id: props.id, ...i }))
-    ]),
+    ul(props, [items.map(i => GitList.Item({ org, host, id: props.id, ...i }))]),
   ])
 }
 
@@ -53,14 +35,11 @@ GitList.style = {
   },
 }
 
-GitList.Item = ({ name, description, desc, id, org, host }) => {
-  if(!name) {
-    console.error('GitList.Item called without a name property', pre, { org, host })
-    return
-  }
-  if (!desc) {
-    desc = description
-  }
+GitList.Item = props => {
+  const { name, id, org, host } = props
+  CHECK_PROPS(props, GitList.Item.props, 'GitList.Item')
+  const desc = props.desc || props.description
+
   return li({ id: `${id}-item-${org}-${name}` }, [
     h3([Link({ to: `https://${host}.com/${org}/${name}` }, `@${org}/${name}`)]),
     desc && p(desc),
@@ -72,5 +51,20 @@ GitList.Item = ({ name, description, desc, id, org, host }) => {
 GitList.Item.dependencies = {
   GitBadges: require('@magic-modules/git-badges'),
 }
+
+GitList.props = [
+  { key: 'id', type: 'string', selector: true, default: 'gitlist' },
+  { key: 'class', type: 'string', selector: true },
+  { key: 'desc', type: ['string', 'array'], alias: 'description' },
+  { key: 'items', type: 'array', required: true },
+  { key: 'org', type: 'string', required: true },
+  { key: 'host', type: 'string', default: 'github' },
+  { key: 'header', type: ['string', 'array'] },
+]
+
+GitList.Item.props = [
+  { key: 'name', type: 'string', required: true },
+  { key: 'desc', type: ['string', 'array'], alias: 'description' },
+]
 
 module.exports = GitList
