@@ -26,6 +26,10 @@ GitList.style = {
     },
     li: {
       padding: '1.5em 0 0',
+
+      li: {
+        padding: '0.2em 0 0',
+      },
     },
   },
 }
