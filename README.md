@@ -4,7 +4,7 @@ GitList module.
 
 shows a list of git repositories belonging to a github/gitlab org.
 
-[html docs](https://magic-modules.github.io/git-list/)
+[html docs / demo](https://magic-modules.github.io/git-list/)
 
 [![NPM version][npm-image]][npm-url]
 [![Linux Build Status][travis-image]][travis-url]
@@ -50,6 +50,10 @@ module.exports = {
 module.exports = () =>
   GitList({
     header: 'magic',
+    description: [
+      'magic static page and serverless webapp generator.', 
+      'client html/css/js size ~5kb.',
+    ],
     org: 'magic',
     host: 'gitlab', // github is default and can be omitted
     class: 'custom-container-class',
@@ -61,3 +65,4 @@ module.exports = () =>
 ```
 
 thats it.
+
