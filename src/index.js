@@ -1,6 +1,5 @@
 const GitList = props => {
   let { items = [], org, host = 'github', header, desc = props.description } = props
-
   CHECK_PROPS(props, GitList.props, 'GitList')
 
   const p = {}
@@ -16,7 +15,7 @@ const GitList = props => {
   return div(p, [
     header && h2(header),
     desc && div({ class: 'description' }, desc),
-    ul(props, [items.map(i => GitList.Item({ org, host, id: props.id, ...i }))]),
+    ul({ id: `${org}-list` }, [items.map(i => GitList.Item({ org, host, ...i }))]),
   ])
 }
 
@@ -31,12 +30,22 @@ GitList.style = {
   },
 }
 
+GitList.props = [
+  { key: 'id', type: 'string' },
+  { key: 'class', type: 'string', selector: true },
+  { key: 'desc', type: ['string', 'array'], alias: 'description' },
+  { key: 'items', type: 'array', required: true },
+  { key: 'org', type: 'string', required: true },
+  { key: 'host', type: 'string', default: 'github' },
+  { key: 'header', type: ['string', 'array'] },
+]
+
 GitList.Item = props => {
-  const { name, id, org, host } = props
+  const { name, org, host } = props
   CHECK_PROPS(props, GitList.Item.props, 'GitList.Item')
   const desc = props.desc || props.description
 
-  return li({ id: `${id}-item-${org}-${name}`, class: 'GitListItem' }, [
+  return li({ id: `${org}-${name}`, class: 'GitListItem' }, [
     h3([Link({ to: `https://${host}.com/${org}/${name}` }, `@${org}/${name}`)]),
     desc && p(desc),
     GitBadges(`${org}/${name}`),
@@ -57,17 +66,8 @@ GitList.Item.dependencies = {
   GitBadges: require('@magic-modules/git-badges'),
 }
 
-GitList.props = [
-  { key: 'id', type: 'string' },
-  { key: 'class', type: 'string', selector: true },
-  { key: 'desc', type: ['string', 'array'], alias: 'description' },
-  { key: 'items', type: 'array', required: true },
-  { key: 'org', type: 'string', required: true },
-  { key: 'host', type: 'string', default: 'github' },
-  { key: 'header', type: ['string', 'array'] },
-]
-
 GitList.Item.props = [
+  { key: 'org', type: 'string', required: true },
   { key: 'name', type: 'string', required: true },
   { key: 'desc', type: ['string', 'array'], alias: 'description' },
 ]
