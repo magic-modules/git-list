@@ -51,7 +51,8 @@ module.exports = () =>
   GitList({
     header: 'magic',
     org: 'magic',
-    class: 'custom-class',
+    host: 'gitlab', // github is default and can be omitted
+    class: 'custom-container-class',
     items: [
       { name: 'core', description: '@magic/core library. grundstein.' },
     ],

@@ -13,9 +13,7 @@ module.exports = state => [
   }),
 
   h2({ id: 'installation' }, 'installation'),
-  Pre(`
-npm install magic-modules/module-list
-`),
+  Pre('npm install magic-modules/module-list'),
 
   h2({ id: 'require' }, 'require'),
   p('first add the component to the assets'),
@@ -33,6 +31,7 @@ module.exports = () =>
   GitList({
     header: 'magic',
     org: 'magic',
+    host: 'github', // github is default, gitlab works too.
     class: 'custom-class',
     items: [
       { name: 'core', description: '@magic/core library. grundstein.' },
