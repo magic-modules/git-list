@@ -8,13 +8,12 @@ const GitList = ({
   ...props
 }) => {
   if (!items.length) {
-    // const stack = new Error().stack
-    // console.error(`GitList called without items ${stack}`)
+    console.error('GitList called without items')
     return
   }
 
   if (!org) {
-    // console.error('GitList called without org')
+    console.error('GitList called without org')
     return
   }
 
@@ -35,8 +34,17 @@ const GitList = ({
 
 GitList.style = {
   '.GitList': {
-    p: {
-      margin: '0.5em 0',
+    ul: {
+      h3: {
+        margin: '0',
+      },
+      li: {
+        margin: '0.5em 0 0',
+      },
+      a: {
+        display: 'block',
+        lineHeight: 1.8,
+      },
     },
   },
 }
