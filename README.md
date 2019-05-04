@@ -17,8 +17,8 @@ shows a list of git repositories belonging to a github/gitlab org.
 [npm-url]: https://www.npmjs.com/package/@magic-modules/git-list
 [travis-image]: https://api.travis-ci.org/magic-modules/git-list.svg?branch=master
 [travis-url]: https://travis-ci.org/magic-modules/git-list
-[appveyor-image]: https://img.shields.io/appveyor/ci/jaeh/git-list/master.svg
-[appveyor-url]: https://ci.appveyor.com/project/jaeh/git-list/branch/master
+[appveyor-image]: https://img.shields.io/appveyor/ci/magic-modules/git-list/master.svg
+[appveyor-url]: https://ci.appveyor.com/project/magic-modules/git-list/branch/master
 [coveralls-image]: https://coveralls.io/repos/github/magic-modules/git-list/badge.svg
 [coveralls-url]: https://coveralls.io/github/magic-modules/git-list
 [greenkeeper-image]: https://badges.greenkeeper.io/magic-modules/git-list.svg
@@ -51,7 +51,7 @@ module.exports = () =>
   GitList({
     header: 'magic',
     description: [
-      'magic static page and serverless webapp generator.', 
+      'magic static and serverless webapp generator.',
       'client html/css/js size ~5kb.',
     ],
     org: 'magic',
