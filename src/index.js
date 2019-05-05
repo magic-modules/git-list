@@ -10,6 +10,8 @@ const GitList = props => {
   }
   if (props.id) {
     p.id = props.id
+  } else {
+    p.id = `${org}-list`
   }
 
   return div(p, [
