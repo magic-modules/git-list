@@ -32,18 +32,6 @@ npm install --save-exact @magic-modules/git-list
 ```
 
 #### usage:
-
-##### import:
-```javascript
-// assets/index.js:
-
-module.exports = {
-  //... other entries
-  GitList = require('@magic-modules/git-list'),
-}
-```
-
-##### use tag
 ```javascript
 // in any component view
 module.exports = () =>
