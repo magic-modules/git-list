@@ -22,10 +22,12 @@ module.exports = () =>
       'magic static page and serverless webapp generator.',
       'client html/css/js size ~5kb.',
     ],
+
     // set id prefix for both list as well as items to allow hash navigation
     // container id will be set to id,
-    // list item id will be set to \`\${id}-item-\${org}-\${name}\`
-    id: 'magic-list',
+    // ul id will be set to \`\${id}-list\`
+    // list item id will be set to \`\${id}-list-item-\${org}-\${name}\`
+    id: 'gl-magic',          // falls back to org if not set
     org: 'magic',
     host: 'github',       // github is default, gitlab works too.
     class: 'custom-class',
@@ -36,12 +38,13 @@ module.exports = () =>
 
   h2({ id: 'demo' }, 'demo'),
   p('this is what it looks like'),
+
   GitList({
-    id: 'magic-list',
+    id: 'gl-magic',
     header: 'magic',
     org: 'magic',
     description: [
-      Link({ to: 'https://magic.github.io' }, '@magic' ),
+      Link({ to: 'https://magic.github.io' }, '@magic'),
       ' static and serverless webapp generator.',
       ' client html/css/js size ~5kb.',
     ],
