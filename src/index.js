@@ -13,6 +13,9 @@ const GitList = props => {
   } else {
     p.id = org
   }
+  if (!p.id.startsWith('gl')) {
+    p.id = `gl-${p.id}`
+  }
 
   return div(p, [
     header && h2(header),
