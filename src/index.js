@@ -11,7 +11,7 @@ const GitList = props => {
   if (props.id) {
     p.id = props.id
   } else {
-    p.id = `${org}-list`
+    p.id = org
   }
 
   return div(p, [
@@ -55,7 +55,7 @@ GitList.Item = props => {
   CHECK_PROPS(props, GitList.Item.props, 'GitList.Item')
   const desc = props.desc || props.description
 
-  return li({ id: `${org}-${name}`, class: 'GitListItem' }, [
+  return li({ id: `${org}-list-item-${name}`, class: 'GitListItem' }, [
     h3([Link({ to: `https://${host}.com/${org}/${name}` }, `@${org}/${name}`)]),
     desc && p(desc),
     GitBadges(`${org}/${name}`),
