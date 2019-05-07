@@ -17,7 +17,9 @@ const GitList = props => {
   return div(p, [
     header && h2(header),
     desc && div({ class: 'description' }, desc),
-    ul({ id: `${org}-list` }, [items.map(i => GitList.Item({ org, host, ...i }))]),
+    ul({ id: `${p.id}-list` }, [
+      items.map(i => GitList.Item({ org, id: `${p.id}-list-item`, host, ...i })),
+    ]),
   ])
 }
 
@@ -51,11 +53,11 @@ GitList.props = [
 ]
 
 GitList.Item = props => {
-  const { name, org, host } = props
+  const { name, org, id, host } = props
   CHECK_PROPS(props, GitList.Item.props, 'GitList.Item')
   const desc = props.desc || props.description
 
-  return li({ id: `${org}-list-item-${name}`, class: 'GitListItem' }, [
+  return li({ id: `${id}-${name}`, class: 'GitListItem' }, [
     h3([Link({ to: `https://${host}.com/${org}/${name}` }, `@${org}/${name}`)]),
     desc && p(desc),
     GitBadges(`${org}/${name}`),
