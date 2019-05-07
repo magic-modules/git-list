@@ -24,10 +24,10 @@ module.exports = () =>
     ],
 
     // set id prefix for both list as well as items to allow hash navigation
-    // container id will be set to id,
-    // ul id will be set to \`\${id}-list\`
-    // list item id will be set to \`\${id}-list-item-\${org}-\${name}\`
-    id: 'gl-magic',          // falls back to org if not set
+    // container id will be set to \`gl-\${id}\`,
+    // ul id will be set to \`gl-\${id}-list\`
+    // list item id will be set to \`gl-\${id}-list-item-\${org}-\${name}\`
+    id: 'magic',          // falls back to org if not set
     org: 'magic',
     host: 'github',       // github is default, gitlab works too.
     class: 'custom-class',
