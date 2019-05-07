@@ -7,10 +7,7 @@ module.exports = state => [
     state.description,
   ]),
 
-  GitBadges({
-    project: 'magic-modules/module-list',
-    appveyor: 'jaeh/module-list',
-  }),
+  GitBadges('magic-modules/module-list'),
 
   h2({ id: 'installation' }, 'installation'),
   Pre('npm install magic-modules/module-list'),
