@@ -30,28 +30,3 @@ shows a list of git repositories belonging to a github/gitlab org.
 ```bash
 npm install --save-exact @magic-modules/git-list
 ```
-
-#### usage:
-```javascript
-// in any component view
-module.exports = () =>
-  GitList({
-    header: 'magic',
-    desc: [ // also accepts longer key: description
-      'magic static and serverless webapp generator.',
-      'client html/css/js size ~5kb.',
-    ],
-    org: 'magic',
-    host: 'gitlab', // github is default and can be omitted
-    class: 'custom-container-class',
-    items: [
-      {
-        name: 'core',
-        desc: '@magic/core library. grundstein.' // also accepts longer key: description
-      },
-    ],
-  })
-```
-
-thats it.
-

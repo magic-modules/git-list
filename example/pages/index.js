@@ -13,7 +13,7 @@ module.exports = state => [
   Pre('npm install magic-modules/module-list'),
 
   h2({ id: 'usage' }, 'usage'),
-  p('in a page or component'),
+  p('in a page or module View'),
   Pre(`
 module.exports = () =>
   GitList({
@@ -25,8 +25,8 @@ module.exports = () =>
 
     // set id prefix for both list as well as items to allow hash navigation
     // container id will be set to \`gl-\${id}\`,
-    // ul id will be set to \`gl-\${id}-list\`
-    // list item id will be set to \`gl-\${id}-list-item-\${org}-\${name}\`
+    // ul id will be set to \`gl-\${id}-ul\`
+    // list item id will be set to \`gl-\${id}-li-\${org}-\${name}\`
     id: 'magic',          // falls back to org if not set
     org: 'magic',
     host: 'github',       // github is default, gitlab works too.
