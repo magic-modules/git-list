@@ -20,8 +20,8 @@ const GitList = props => {
   return div(p, [
     header && h2(header),
     desc && div({ class: 'description' }, desc),
-    ul({ id: `${p.id}-list` }, [
-      items.map(i => GitList.Item({ org, id: `${p.id}-list-item`, host, ...i })),
+    ul({ id: `${p.id}-ul` }, [
+      items.map(i => GitList.Item({ org, id: `${p.id}-li`, host, ...i })),
     ]),
   ])
 }
