@@ -1,0 +1,11 @@
+{
+  "css": "sha384-sNMw58nm5/LYg252Ua34pJOe6vFgOHzaiVGX8v0QOCS1YVP0OZ5OGClQWYpmp4Eg",
+  "js": "sha384-YLB1+1q4qBikEQrFdOJQ576fk96am1H6Yyt0+hNq3QNf+ZkLK10GRP43rPRBdB1x",
+  "pages": {
+    "/git-list/": "sha384-jog7eSKpzcX7ptf5RObHgotg2W6YVgcKlaJX0U8ndi+m6xpDVCYHKArD3PLo/oK2",
+    "/git-list/404/": "sha384-VmpVO5gltmqndF8DEDodARGSJZCLhsT2sZfv82usbjauPLPXL9UIAUV5LHqk0gea"
+  },
+  "static": {
+    "/favicon.ico": "sha384-pf51ay6pZCj3+XlVCPmCKLDFpLj7QP+2heR+/n08WgS7Bve7JMkgubHOkwLzaTr+"
+  }
+}
