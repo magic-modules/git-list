@@ -11,7 +11,9 @@
     "dev": "magic dev --watch src",
     "calls": "calls"
   },
-  "main": "src/index.js",
+  "main": "src/index.mjs",
+  "module": "src/index.mjs",
+  "type": "module",
   "files": [
     "src"
   ],
