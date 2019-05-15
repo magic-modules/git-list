@@ -1,4 +1,4 @@
-const GitList = props => {
+export const GitList = props => {
   let { items = [], org, host = 'github', header, desc = props.description } = props
   CHECK_PROPS(props, GitList.props, 'GitList')
 
@@ -21,7 +21,7 @@ const GitList = props => {
     header && h2(header),
     desc && div({ class: 'description' }, desc),
     ul({ id: `${p.id}-ul` }, [
-      items.map(i => GitList.Item({ org, id: `${p.id}-li`, host, ...i })),
+      items.map(i => GitListItem({ org, id: `${p.id}-li`, host, ...i })),
     ]),
   ])
 }
@@ -55,7 +55,7 @@ GitList.props = [
   { key: 'header', type: ['string', 'array'] },
 ]
 
-GitList.Item = props => {
+export const GitListItem = props => {
   const { name, org, id, host } = props
   CHECK_PROPS(props, GitList.Item.props, 'GitList.Item')
   const desc = props.desc || props.description
@@ -68,14 +68,10 @@ GitList.Item = props => {
   ])
 }
 
-GitList.Item.dependencies = {
-  GitBadges: require('@magic-modules/git-badges'),
-}
-
-GitList.Item.props = [
+GitListItem.props = [
   { key: 'org', type: 'string', required: true },
   { key: 'name', type: 'string', required: true },
   { key: 'desc', type: ['string', 'array'], alias: 'description' },
 ]
 
-module.exports = GitList
+export default GitList
