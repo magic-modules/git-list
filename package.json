@@ -1,7 +1,13 @@
 {
   "name": "@magic-modules/git-list",
   "version": "0.0.1",
+  "author": "Wizards & Witches",
+  "description": "@magic-modules/git-list. shows a list of git repositories belonging to a github/gitlab org.",
+  "license": "AGPL-3.0",
   "homepage": "https://magic-modules.github.io/git-list",
+  "engines": {
+    "node": ">=12.2.0"
+  },
   "scripts": {
     "start": "t -p",
     "format": "f -w --exclude docs",
@@ -33,16 +39,11 @@
     "@magic/core": "github:magic/core",
     "@magic/test": "0.1.6"
   },
-  "author": "Wizards & Witches",
-  "description": "@magic-modules/git-list. shows a list of git repositories belonging to a github/gitlab org.",
   "keywords": [
     "magic",
     "git-list",
-    "github",
-    "gitlab",
     "badges"
   ],
-  "license": "AGPL-3.0",
   "contributors": [
     {
       "name": "jascha ehrenreich",
