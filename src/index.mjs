@@ -71,4 +71,3 @@ Item.propTypes = [
 ]
 
 const GitList = { Item }
-
