@@ -1,4 +1,4 @@
-module.exports = state => [
+export const View = state => [
   h1(state.title),
   p([
     'this is the ',
