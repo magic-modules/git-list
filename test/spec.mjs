@@ -1,4 +1,4 @@
 import { is } from '@magic/test'
-import { GitList } from '../src/index.mjs'
+import * as GitList from '../src/index.mjs'
 
-export default [{ fn: () => GitList, expect: is.function, info: 'expect a function' }]
+export default [{ fn: () => GitList.View, expect: is.function, info: 'expect GitList.View to be a function' }]
