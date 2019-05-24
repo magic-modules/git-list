@@ -60,7 +60,7 @@ export const propTypes = {
 
 export const Item = props => {
   const { name, org, id, host } = props
-  CHECK_PROPS(props, propTypes.GitListItem, 'GitList.Item')
+  CHECK_PROPS(props, propTypes, 'GitListItem')
   const desc = props.desc || props.description
 
   return li({ id: `${id}-${name}`, class: 'GitListItem' }, [
