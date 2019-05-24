@@ -41,19 +41,26 @@ export const style = {
   },
 }
 
-export const propTypes = [
-  { key: 'id', type: 'string' },
-  { key: 'class', type: 'string', selector: true },
-  { key: 'desc', type: ['string', 'array'], alias: 'description' },
-  { key: 'items', type: 'array', required: true },
-  { key: 'org', type: 'string', required: true },
-  { key: 'host', type: 'string', default: 'github' },
-  { key: 'header', type: ['string', 'array'] },
-]
+export const propTypes = {
+  GitList: [
+    { key: 'id', type: 'string' },
+    { key: 'class', type: 'string', selector: true },
+    { key: 'desc', type: ['string', 'array'], alias: 'description' },
+    { key: 'items', type: 'array', required: true },
+    { key: 'org', type: 'string', required: true },
+    { key: 'host', type: 'string', default: 'github' },
+    { key: 'header', type: ['string', 'array'] },
+  ],
+  GitListItem: [
+    { key: 'org', type: 'string', required: true },
+    { key: 'name', type: 'string', required: true },
+    { key: 'desc', type: ['string', 'array'], alias: 'description' },
+  ],
+}
 
 export const Item = props => {
   const { name, org, id, host } = props
-  CHECK_PROPS(props, Item.propTypes, 'GitList.Item')
+  CHECK_PROPS(props, propTypes.GitListItem, 'GitList.Item')
   const desc = props.desc || props.description
 
   return li({ id: `${id}-${name}`, class: 'GitListItem' }, [
@@ -63,11 +70,5 @@ export const Item = props => {
     Link({ to: `https://${org}.${host}.io/${name}` }, 'docs / demo'),
   ])
 }
-
-Item.propTypes = [
-  { key: 'org', type: 'string', required: true },
-  { key: 'name', type: 'string', required: true },
-  { key: 'desc', type: ['string', 'array'], alias: 'description' },
-]
 
 const GitList = { Item }
