@@ -3,7 +3,7 @@ export const View = state => [
   p([
     'this is the ',
     Link({ to: 'https://github.com/magic-modules' }, '@magic-modules'),
-    ' GitList module.',
+    ' GitList module. ',
     state.description,
   ]),
 
