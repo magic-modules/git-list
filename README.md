@@ -15,8 +15,8 @@ shows a list of git repositories belonging to a github/gitlab org.
 
 [npm-image]: https://img.shields.io/npm/v/@magic-modules/git-list.svg
 [npm-url]: https://www.npmjs.com/package/@magic-modules/git-list
-[travis-image]: https://api.travis-ci.org/magic-modules/git-list.svg?branch=master
-[travis-url]: https://travis-ci.org/magic-modules/git-list
+[travis-image]: https://img.shields.io/travis/com/magic-modules/git-list/master
+[travis-url]: https://travis-ci.com/magic-modules/git-list
 [appveyor-image]: https://img.shields.io/appveyor/ci/magicmodules/git-list/master.svg
 [appveyor-url]: https://ci.appveyor.com/project/magicmodules/git-list/branch/master
 [coveralls-image]: https://coveralls.io/repos/github/magic-modules/git-list/badge.svg
