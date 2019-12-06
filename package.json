@@ -31,7 +31,7 @@
     "url": "https://github.com/magic-modules/git-list/issues"
   },
   "dependencies": {
-    "@magic-modules/git-badges": "github:magic-modules/git-badges"
+    "@magic-modules/git-badges": "0.0.1"
   },
   "devDependencies": {
     "@magic-modules/light-switch": "github:magic-modules/light-switch",
