@@ -1,9 +1,9 @@
 {
-  "css": "sha384-35CZOeguCdSLICg/nGnVzyrvU4xpMpFgg7fSMWlUVqUpw+Q5UXV5kdnF0NSqpl/x",
-  "js": "sha384-tLEQ4/qpHIGsJKNnAsuWHYQ+LQcLZHQvWznlVjiEElvBaxMmMDBDeICFbHYdKEyB",
+  "css": "sha384-zUV/sQI/y6xGoBuZhfH9g7e72yRzHMsh5CKxgVjtDHoNLyOK/LDFG6EQPnyP3k6Z",
+  "js": "sha384-TMjF0RAeZEHBxIsR2hLUo8LQqqeqZwJNkmJlvRAN8wl95VP6cscMiwc6vBXfrPFL",
   "pages": {
-    "/git-list/": "sha384-dTgXFR8HRDETaVGKWhMo3q4ztKGynoVGTVFfHDvHcMEyki6vOsymxHWncRXgO3h6",
-    "/git-list/404/": "sha384-aOlMUOy94CFVHslIMjxbirl2AANV4lkubAaSxfSEFCRPXtqfjpkB0kvMuTQcL3im"
+    "/git-list/": "sha384-IBXPY4/nqOMEPga5ogf+UvjwoWbwfMMtyWkpTeKIU1DqA8x6Ky0KAcsc8qOt0R2M",
+    "/git-list/404/": "sha384-LZmk1V9LOWjwi+6WwXX0dQ2Cc7WazBzeVTOqLH3/Geqc1SI+5vuAZwDoc/MqY8oU"
   },
   "static": {
     "/favicon.ico": "sha384-pf51ay6pZCj3+XlVCPmCKLDFpLj7QP+2heR+/n08WgS7Bve7JMkgubHOkwLzaTr+",
