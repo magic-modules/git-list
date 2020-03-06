@@ -34,10 +34,6 @@ export const style = {
     li: {
       padding: '0.2em 0 0',
     },
-
-    a: {
-      display: 'block',
-    },
   },
 }
 
