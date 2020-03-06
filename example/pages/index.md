@@ -3,23 +3,24 @@
 this is the
 [@magic-modules](https://github.com/magic-modules)
 GitList module.
+
 ${state.description}
 
 <GitBadges>magic-modules/module-list</GitBadges>
 
 ## installation
 
-<Pre>npm install --save-exact @magic-modules/module-list</Pre>
+`npm install --save-exact @magic-modules/git-list`
 
 ## usage
 
 in a page or module View
 
-<Pre>
-module.exports = () =>
+```
 &lt;GitList
   header="magic"
-  desc="[ // also accepts longer key: description
+  // also accepts longer key: description
+  desc="[
     'magic static page and serverless webapp generator.',
     'client html/css/js size ~5kb.',
   ]"
@@ -36,7 +37,7 @@ module.exports = () =>
     { name: 'core', description: '@magic/core library. grundstein.' },
   ]">
 &lt;GitList>
-</Pre>
+```
 
 ## demo
 
