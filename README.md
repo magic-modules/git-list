@@ -48,5 +48,8 @@ require node 13.5.0
 ##### 0.0.5
 list links: remove display: block
 
-##### 0.0.6 - unreleased
+##### 0.0.6
+update git-badges
+
+##### 0.0.7 - unreleased
 ...
