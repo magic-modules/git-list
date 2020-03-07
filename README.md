@@ -49,7 +49,8 @@ require node 13.5.0
 list links: remove display: block
 
 ##### 0.0.6
-update git-badges
+* update git-badges
+* wrap docs/demo link in p tag to prevent it from floating next to badges
 
 ##### 0.0.7 - unreleased
 ...
