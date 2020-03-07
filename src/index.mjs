@@ -63,7 +63,7 @@ export const Item = props => {
     h3([Link({ to: `https://${host}.com/${org}/${name}` }, `@${org}/${name}`)]),
     desc && p(desc),
     GitBadges(`${org}/${name}`),
-    Link({ to: `https://${org}.${host}.io/${name}` }, 'docs / demo'),
+    p(Link({ to: `https://${org}.${host}.io/${name}` }, 'docs / demo')),
   ])
 }
 
