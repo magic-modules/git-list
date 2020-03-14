@@ -52,5 +52,8 @@ list links: remove display: block
 * update git-badges
 * wrap docs/demo link in p tag to prevent it from floating next to badges
 
-##### 0.0.7 - unreleased
+##### 0.0.7
+update GitBadges
+
+##### 0.0.8 - unreleased
 ...
