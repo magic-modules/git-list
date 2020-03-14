@@ -62,7 +62,7 @@ export const Item = props => {
   return li({ id: `${id}-${name}`, class: 'GitListItem' }, [
     h3([Link({ to: `https://${host}.com/${org}/${name}` }, `@${org}/${name}`)]),
     desc && p(desc),
-    GitBadges(`${org}/${name}`),
+    GitBadges(`@${org}/${name}`),
     p(Link({ to: `https://${org}.${host}.io/${name}` }, 'docs / demo')),
   ])
 }
