@@ -6,7 +6,7 @@ GitList module.
 
 ${state.description}
 
-<GitBadges>magic-modules/module-list</GitBadges>
+<GitBadges>@magic-modules/module-list</GitBadges>
 
 ## installation
 
