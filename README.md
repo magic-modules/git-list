@@ -55,5 +55,8 @@ list links: remove display: block
 ##### 0.0.7
 update GitBadges
 
-##### 0.0.8 - unreleased
+##### 0.0.8
+props.badges added => toggles git badge list
+
+##### 0.0.9 - unreleased
 ...
