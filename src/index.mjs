@@ -1,5 +1,5 @@
 export const View = props => {
-  let { items = [], org, host = 'github', header, desc = props.description } = props
+  let { badges = true, items = [], org, host = 'github', header, desc = props.description } = props
   CHECK_PROPS(props, propTypes, 'GitList')
 
   const p = {}
@@ -20,7 +20,7 @@ export const View = props => {
   return div(p, [
     header && h2(header),
     desc && div({ class: 'description' }, desc),
-    ul({ id: `${p.id}-ul` }, [items.map(i => GitList.Item({ org, id: `${p.id}-li`, host, ...i }))]),
+    ul({ id: `${p.id}-ul` }, [items.map(i => GitList.Item({ badges, org, id: `${p.id}-li`, host, ...i }))]),
   ])
 }
 
@@ -46,23 +46,25 @@ export const propTypes = {
     { key: 'org', type: 'string', required: true },
     { key: 'host', type: 'string', default: 'github' },
     { key: 'header', type: ['string', 'array'] },
+    { key: 'badges', type: 'boolean' },
   ],
   GitListItem: [
     { key: 'org', type: 'string', required: true },
     { key: 'name', type: 'string', required: true },
     { key: 'desc', type: ['string', 'array'], alias: 'description' },
+    { key: 'badges', type: 'boolean' },
   ],
 }
 
 export const Item = props => {
-  const { name, org, id, host } = props
+  const { name, org, id, host, badges = true } = props
   CHECK_PROPS(props, propTypes, 'GitListItem')
   const desc = props.desc || props.description
 
   return li({ id: `${id}-${name}`, class: 'GitListItem' }, [
     h3([Link({ to: `https://${host}.com/${org}/${name}` }, `@${org}/${name}`)]),
     desc && p(desc),
-    GitBadges(`@${org}/${name}`),
+    badges && GitBadges(`@${org}/${name}`),
     p(Link({ to: `https://${org}.${host}.io/${name}` }, 'docs / demo')),
   ])
 }
