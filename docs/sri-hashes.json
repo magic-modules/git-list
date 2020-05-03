@@ -1,12 +1,8 @@
 {
-  "css": "sha384-c4+bzFA1XDpW5Yu0ISsLqoU8edmOQcCJfkelo2uoetuQIMOjrmspexk6GbTG2KlM",
-  "js": "sha384-W77UI5lNtIa0AcmkPtWvIzsx9LLmRI2f2u2k5ax08/REpnJIU8UKSrMnc/XSxgKK",
-  "pages": {
-    "/git-list/": "sha384-UjaxEQEhJnYD3ONTw09Dzgc+y26nVK0We97DyYM5ZTbGZzQk1BFcAiUy1Io2iTuo",
-    "/git-list/404/": "sha384-899bjG7aqOCGMMSOooXlFZY1z4Un61j02U8SDMqxy66eZgr8uKvD3mdxCvpc5i9z"
-  },
-  "static": {
-    "/robots.txt": "sha384-vkXgxvr5G0XWQhzBn1GX9AW/EKYFIdEFBqx7MiBxK0V5EOES15aRjapcegxRSzWM",
-    "/sitemap.xml": "sha384-xHrKTVAa+7haQV0nhDsRWC8sAVw8UZvr0vF3P24Rb1qHbh7Nbe0gvl3eBYYs0+E3"
-  }
+  "/magic.css": "sha384-c4+bzFA1XDpW5Yu0ISsLqoU8edmOQcCJfkelo2uoetuQIMOjrmspexk6GbTG2KlM",
+  "/magic.js": "sha384-yi0aNGd8ZcL2dsPva8xt2Ymac7EkZEFiaUWdTqaQfrMcJVRvjPU43nK+L10X9qh3",
+  "/git-list/": "sha384-kxRVbFXC5O2YPcnzhWWZHEHxJRcj628xrkBrSymrmq1zIVvXL25r+pKWcTjcxnti",
+  "/git-list/404/": "sha384-Q+DZQS3jFWdFT6ZyguGP2YsB6nSzB7GTYvn46pNGmwt+CNROkaEDnPoa3wZ6I1Jg",
+  "/robots.txt": "sha384-vkXgxvr5G0XWQhzBn1GX9AW/EKYFIdEFBqx7MiBxK0V5EOES15aRjapcegxRSzWM",
+  "/sitemap.xml": "sha384-sCc9BoIBD35/BbWYyGxC54xSqdSaZCwfXym6cQqYF8I10UXdQkqixkBba0zeD/QQ"
 }
