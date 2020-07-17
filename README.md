@@ -61,5 +61,8 @@ props.badges added => toggles git badge list
 ##### 0.0.9
 bump required node version to 14.2.0
 
-##### 0.0.10 - unreleased
+##### 0.0.10
+header link leads to demo, git repo link is before badges
+
+##### 0.0.11 - unreleased
 ...
