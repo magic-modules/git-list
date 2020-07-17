@@ -20,7 +20,9 @@ export const View = props => {
   return div(p, [
     header && h2(header),
     desc && div({ class: 'description' }, desc),
-    ul({ id: `${p.id}-ul` }, [items.map(i => GitList.Item({ badges, org, id: `${p.id}-li`, host, ...i }))]),
+    ul({ id: `${p.id}-ul` }, [
+      items.map(i => GitList.Item({ badges, org, id: `${p.id}-li`, host, ...i })),
+    ]),
   ])
 }
 
