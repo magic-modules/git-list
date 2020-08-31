@@ -1,6 +1,6 @@
 {
   "name": "@magic-modules/git-list",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "author": "Wizards & Witches",
   "description": "@magic-modules/git-list. shows a list of git repositories belonging to a github/gitlab org.",
   "license": "AGPL-3.0",
