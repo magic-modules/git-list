@@ -64,5 +64,8 @@ bump required node version to 14.2.0
 ##### 0.0.10
 header link leads to demo, git repo link is before badges
 
-##### 0.0.11 - unreleased
+##### 0.0.11
+fix typo
+
+##### 0.0.12 - unreleased
 ...
