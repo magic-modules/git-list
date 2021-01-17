@@ -67,5 +67,8 @@ header link leads to demo, git repo link is before badges
 ##### 0.0.11
 fix typo
 
-##### 0.0.12 - unreleased
+##### 0.0.12 
+bump required node version to 14.15.4
+
+##### 0.0.13 - unreleased
 ...
